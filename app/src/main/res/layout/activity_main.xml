@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/w_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:text="@string/app_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCity"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/city"
+            android:textColorHint="@color/purple_700"
+            android:inputType="text"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCountryCode"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/country_code"
+            android:textColorHint="@color/purple_700"
+            android:inputType="text"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/getBtn"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            android:text="@string/search"
+            android:onClick="getWeatherDetails"
+            app:backgroundTint="@null"/>
+        
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Results"
+                android:paddingBottom="10dp"
+                android:textAlignment="center"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
